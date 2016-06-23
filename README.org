@@ -1,0 +1,11 @@
+
+Hybrid-FM
+
+By Vagelis Tsatsis
+
+Some modifications by Iannis Zannos
+
+23 Jun 2016 19:34
+
+Synthesis based on SinOscFB, Wavetables, and FM, with a GUI, and MIDI control.
+
