@@ -3,17 +3,29 @@ Refactoring PolySynth_1, 2, 3
 */
 
 PolySynth {
-	var waveTable, harmonics, synths;
+	var defFunc, synthFunc, bendFunc;
+	var <waveTable1, <wavetable2, <harmonics, synths, lastNoteIndex = -1;
 
-	*load {
-		^this.new.load;
+	*load { | defFunc, synthFunc, bendFunc |
+		^this.new (defFunc, synthFunc, bendFunc).load;
 	}
 
-	new {
-		^super.new.init;
+	new { | defFunc, synthFunc, bendFunc |
+		defFunc ?? {
+			defFunc = { }
+		};
+		synthFunc ?? {
+			synthFun = { }
+		};
+		bendFunc ?? {
+			bendFunc = { }
+		};
+		^super.newCopyArgs (defFunc, synthFunc, bendFunc).init;
 	}
 
 	init {
+		this.makeWavetables;
+		this.makeHarmonics;
 	}
 	
 	load {
