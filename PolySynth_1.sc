@@ -1,5 +1,5 @@
 PolySynth_1 {
-
+	
 //class methods
 
 	*load {
