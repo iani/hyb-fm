@@ -141,12 +141,3 @@ SynthDef(\FMSynth_2, { | bufnum,
 	}
 
 }
-
-
-
-
-
-
-
-
-
