@@ -15,7 +15,7 @@ PolySynth {
 			defFunc = { }
 		};
 		synthFunc ?? {
-			synthFun = { }
+			synthFunc = { }
 		};
 		bendFunc ?? {
 			bendFunc = { }
